@@ -13,28 +13,24 @@ Table of Contents:
 ////////////////////////*/
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-:root {
-    --color-text: #260803;
-    --color-secondary: #FDEFEC;
-    --color-big-screen: #F26D40;
-    --color-medium-screen: #F69051;
-    --color-small-screen: #F9C48B;
+html {
+    font-size: 16px;
 }
 
 body {
     font-family: 'Dosis', sans-serif;
+    background-color: #F9C48B;
+    color: #260803;
     font-weight: 400;
-    color: var(--color-text);
 }
 
 img {
     width: 100%;
-    display: block;
 }
 
 /*////////////////////////
@@ -42,60 +38,47 @@ img {
 ////////////////////////*/
 
 h2 {
-    font-size: 2rem;      /* schaalbaar door rem */
-    font-weight: 700;     /* stevige kopjes */
+    margin: 0 0 .5rem 0;
 }
 
 p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-em {
-    font-style: italic;
+    margin: .75rem 0;
 }
 
 /*////////////////////////
     3. Areas
 ////////////////////////*/
 
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-section {
-    border: none;
-    background-color: var(--color-secondary);
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin: 1rem;
+.card-section {
+    background-color: #fdefec;
+    box-shadow: 0 .0625rem .25rem rgba(0, 0, 0, 0.16);
+    padding: 2rem;
+    margin: 1.5rem;
+    border-radius: .5rem;
 }
 
 /*////////////////////////
-    4. Media Queries
+    2. Media Queries
 ////////////////////////*/
-
-html {
-    /* voor mobiel */
-    font-size: 16px;
-    background-color: var(--color-small-screen);
-}
 
 @media screen and (min-width: 768px) {
     /* voor tablets */
     html {
         font-size: 18px;
-        background-color: var(--color-medium-screen);
+    }
+
+    body {
+        background-color: #F69051;
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
     /* voor desktops en groter */
     html {
         font-size: 20px;
-        background-color: var(--color-big-screen);
+    }
+
+    body {
+        background-color: #F26D40;
     }
 }
