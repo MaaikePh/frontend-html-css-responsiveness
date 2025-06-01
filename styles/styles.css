@@ -30,6 +30,7 @@ body {
     font-family: 'Dosis', sans-serif;
     font-weight: 400;
     color: var(--color-text);
+    background-color: var(--color-small-screen);
 }
 
 img {
@@ -42,8 +43,9 @@ img {
 ////////////////////////*/
 
 h2 {
-    font-size: 2rem;      /* schaalbaar door rem */
-    font-weight: 700;     /* stevige kopjes */
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
 p {
@@ -69,7 +71,8 @@ main {
 section {
     border: none;
     background-color: var(--color-secondary);
-    border-radius: 10px;
+    border-radius: 0.5rem;
+    box-shadow: 0 .0625rem .25rem rgba(0, 0, 0, 0.16);
     padding: 1.5rem;
     margin: 1rem;
 }
@@ -81,13 +84,15 @@ section {
 html {
     /* voor mobiel */
     font-size: 16px;
-    background-color: var(--color-small-screen);
 }
 
 @media screen and (min-width: 768px) {
     /* voor tablets */
     html {
         font-size: 18px;
+    }
+
+    body {
         background-color: var(--color-medium-screen);
     }
 }
@@ -96,6 +101,9 @@ html {
     /* voor desktops en groter */
     html {
         font-size: 20px;
+    }
+
+    body {
         background-color: var(--color-big-screen);
     }
 }
